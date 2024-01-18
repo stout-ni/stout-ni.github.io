@@ -11,7 +11,7 @@ categories: Expo ReactNative
 
 ## TL;DR
 
-> 示例代码参考：https://github.com/kyavla/expo-router-monorepo-example
+> 示例代码参考：[expo-router-monorepo-example](https://github.com/kyavla/expo-router-monorepo-example)
 
 参考[官网文档](https://docs.expo.dev/guides/monorepos/#create-our-first-app)一直操作到添加完`metro.config.js`文件。
 
@@ -43,7 +43,7 @@ TypeError: ExpoResponse is not a constructor
 
 结合稍微看两眼文档就知道这是由于 Expo 默认不兼容 Monorepo 引起的路径问题。但如果沿着 Expo 的官方文档一步步走下去，到了添加`index.js`这一步就有问题了，因为官方文档使用的不是 Expo Router 版本的项目，没有`App.[jt]sx`文件，只有一个`app`目录。
 
-这个时候的思路就在于，怎么去找到 Expo Router 里的入口文件。因为很明显可以知道`registerRootComponent`是类似于`ReactDOM.render`一样的一个入口函数，而里面的参数就是根节点。
+因为很明显可以知道`registerRootComponent`是一个用于指定根组件的函数，因此这个时候的思路就在于，怎么去找到 Expo Router 里的入口文件，也就是此时该从哪里去 import 这个目前不存在的 App。
 
 然后我们就可以去看一看官网让我们替换`package.json`中原来的 main 入口，也就是`expo-router/entry`这个东西。直接去 node_modules 里就能找到这个文件。
 
