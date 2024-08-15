@@ -11,7 +11,7 @@ categories: Expo ReactNative
 
 ## TL;DR
 
-> 示例代码参考：[expo-router-monorepo-example](https://github.com/kyavla/expo-router-monorepo-example)
+> 示例代码参考：[expo-router-monorepo-example](https://github.com/stout-ni/expo-router-monorepo-example)
 
 参考[官网文档](https://docs.expo.dev/guides/monorepos/#create-our-first-app)一直操作到添加完`metro.config.js`文件。
 
